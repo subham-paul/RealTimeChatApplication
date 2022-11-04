@@ -7,6 +7,7 @@ const messageContainer = document.querySelector('.container')
 
 // Audio that will play on receiving messages
 var audio = new Audio('ting.mp3');
+var _audio = new Audio('ting_1.mp3');
 
 // Function which will append event info to the container
 const append = (message, position)=>{
@@ -17,7 +18,7 @@ const append = (message, position)=>{
     messageContainer.append(messageElement);
     messageContainer.scrollTop = messageContainer.scrollHeight;
     if(position == 'left'){
-        console.log('sound is playing');
+        // console.log('sound is playing');
         audio.play();
     }
 }
@@ -28,7 +29,7 @@ socket.emit('new-user-joined', name)
 
 // If a new user joins, receive his/her name from the server 
 socket.on('user-joined', name=>{
-    append(`${name} joined the chat`, 'right');
+    append(`${name}: joined the chat`, 'right');
 })
 
 // If server sends a message, receive it
@@ -38,7 +39,7 @@ socket.on('receive', data=>{
 
 // If a user leave the chat, append the info to the container
 socket.on('left', name=>{
-    append(`${name } left the chat`, 'left');
+    append(`${name }: left the chat`, 'center');
 })
 
 // If the form gets submitted, send server the message
@@ -47,5 +48,5 @@ form.addEventListener('submit', (e)=>{
     const message = messageInput.value;
     append(`You: ${message}`, 'right');
     socket.emit('send', message);
-    messageInput.value = '';
+    messageInput.value = ' ';
 })

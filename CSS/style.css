@@ -2,18 +2,15 @@
 .logo{
     display: block;
     margin: auto;
+    padding-top: 10px;
 }
 body {
   height: 100vh;
-  background-color: rgb(
-    158,
-    160,
-    180
-  ); /* For browsers that do not support gradients */
+  background-color: rgb(160, 220, 168); /* For browsers that do not support gradients */
   background-image: radial-gradient(
     rgb(214, 186, 214),
-    rgb(158, 160, 180),
-    rgb(151, 148, 169)
+    rgb(158, 180, 161),
+    rgb(31, 130, 56)
   );
   padding: 0px;
   margin: 0px;
@@ -49,13 +46,13 @@ h1 {
 .container {
   width: 80%;
   margin: auto;
-  height: 40vh;
+  height: 70vh;
   padding: 33px;
   overflow-y: auto;
   margin-bottom: 23px;
   border-radius: 50px;
 
-  border: 15px solid hsla(0, 0%, 100%, 0.5);
+  /* border: 15px solid hsla(0, 0%, 100%, 0.5); */
   background-image: url(../images/bg1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
