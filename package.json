@@ -1,0 +1,16 @@
+{
+  "name": "realtimechatapplicationusingnodejs-socketio",
+  "version": "1.0.0",
+  "description": "<h1>RealTime Chat Application - LetsChat</h1>",
+  "main": "index.js",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Subham Paul",
+  "license": "ISC"
+}
